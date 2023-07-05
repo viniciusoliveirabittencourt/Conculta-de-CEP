@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import './style.css'
 
 const button = document.querySelector('button');
@@ -21,6 +22,13 @@ async function handleClick() {
 
     return data;
   } catch (error) {
-    return error.message;
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'O CEP precisa ser um CEP válido!',
+      background: 'rgb(10, 15, 10)',
+      color: '#fff',
+      confirmButtonColor: 'rgb(162, 224, 70)'
+    });
   }
 }
