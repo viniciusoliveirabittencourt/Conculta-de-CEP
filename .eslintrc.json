@@ -1,1 +1,1 @@
-{ "extendes": "@trybe/eslint-config-frontend" }
+{ "extends": "@trybe/eslint-config-frontend" }
